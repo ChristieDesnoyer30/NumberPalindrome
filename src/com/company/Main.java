@@ -1,19 +1,18 @@
 package com.company;
 
+
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 
 public class Main {
 
 public static ArrayList<Integer> palindromeArray = new ArrayList<>();
+
     public static void main(String[] args) {
 
         int product = 0;
-
-
-
 
         for(int i = 999; i >100; i--){
 
@@ -28,6 +27,8 @@ public static ArrayList<Integer> palindromeArray = new ArrayList<>();
             }
 
         }
+
+        System.out.println(palindromeArray);
 
         Collections.sort(palindromeArray);
 
@@ -51,11 +52,10 @@ public static ArrayList<Integer> palindromeArray = new ArrayList<>();
 
             palindrome = Integer.parseInt(number);
 
-
+            palindromeArray.add(palindrome);
 
         }
 
-        palindromeArray.add(palindrome);
 
     }
 
