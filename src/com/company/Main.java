@@ -1,25 +1,39 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+
 public class Main {
 
     public static void main(String[] args) {
 
         int product = 0;
 
-        for(int i = 99; i >=1; i-- ){
-            for (int j = 99; j >= 1; j--){
+        ArrayList<Integer> palindromeArray = new ArrayList<>();
+
+
+        for(int i = 999; i >100; i--){
+
+            for (int j = 999; j >100; j--){
 
                 product = i* j;
 
                 String product1 = Integer.toString(product);
 
-                comparePalindrome(product1);
+               int bread=  comparePalindrome(product1);
 
+                //System.out.println(bread);
+
+               palindromeArray.add(bread);
 
             }
 
-            break;
         }
+        Collections.sort(palindromeArray);
+        Collections.reverse(palindromeArray);
+
+        System.out.println(palindromeArray.get(0));
 
         System.out.println("Done");
 
@@ -27,14 +41,24 @@ public class Main {
     }
 
 
-    public static void comparePalindrome(String number){
+    public static int comparePalindrome(String number){
+
+        int palindrome = 0;
 
         String reverse = isPalindrome(number);
 
         if(number.equals(reverse)){
-            System.out.println( number + " is a palindrome " + reverse);
+
+           //System.out.println(number + " is a palindrome " + reverse);
+
+
+            palindrome = Integer.parseInt(number);
+
+           // System.out.println(palindrome);
 
         }
+
+        return palindrome;
 
     }
 
