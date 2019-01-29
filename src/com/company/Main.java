@@ -1,16 +1,18 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 
 public class Main {
 
+public static ArrayList<Integer> palindromeArray = new ArrayList<>();
     public static void main(String[] args) {
 
         int product = 0;
 
-        ArrayList<Integer> palindromeArray = new ArrayList<>();
+
 
 
         for(int i = 999; i >100; i--){
@@ -21,16 +23,14 @@ public class Main {
 
                 String product1 = Integer.toString(product);
 
-               int bread=  comparePalindrome(product1);
-
-                //System.out.println(bread);
-
-               palindromeArray.add(bread);
+               comparePalindrome(product1);
 
             }
 
         }
+
         Collections.sort(palindromeArray);
+
         Collections.reverse(palindromeArray);
 
         System.out.println(palindromeArray.get(0));
@@ -41,7 +41,7 @@ public class Main {
     }
 
 
-    public static int comparePalindrome(String number){
+    public static void comparePalindrome(String number){
 
         int palindrome = 0;
 
@@ -49,16 +49,13 @@ public class Main {
 
         if(number.equals(reverse)){
 
-           //System.out.println(number + " is a palindrome " + reverse);
-
-
             palindrome = Integer.parseInt(number);
 
-           // System.out.println(palindrome);
+
 
         }
 
-        return palindrome;
+        palindromeArray.add(palindrome);
 
     }
 
