@@ -1,10 +1,7 @@
 package com.company;
 
-
-
 import java.util.ArrayList;
 import java.util.Collections;
-
 
 public class Main {
 
@@ -28,15 +25,11 @@ public static ArrayList<Integer> palindromeArray = new ArrayList<>();
 
         }
 
-        System.out.println(palindromeArray);
+        
+        System.out.println("The highest palindrome product of three digit numbers is : " + Collections.max(palindromeArray));
 
-        Collections.sort(palindromeArray);
 
-        Collections.reverse(palindromeArray);
 
-        System.out.println(palindromeArray.get(0));
-
-        System.out.println("Done");
 
 
     }
